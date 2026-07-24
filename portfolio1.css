@@ -128,6 +128,7 @@ header {
 
     background: linear-gradient(135deg, var(--primary), var(--secondary));
     -webkit-background-clip: text;
+    
     -webkit-text-fill-color: transparent;
 
 }
@@ -429,11 +430,6 @@ header {
 
 }
 
-.hero-image img:hover {
-
-    /* transform:scale(1.04); */
-
-}
 
 .img-box {
     display: flex;
