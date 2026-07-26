@@ -2024,6 +2024,74 @@ footer hr {
     color: white;
 
 }
+
+/* ===========================
+   Light MODE
+=========================== */
+
+body.dark {
+
+    background: #f6d9c8;
+
+    color: #F8F1E9;
+
+}
+
+body.dark .navbar {
+
+    background: rgba(255, 138, 71, 0.95);
+
+    backdrop-filter: blur(18px);
+
+    border-bottom: 1px solid rgba(255, 255, 255, .08);
+
+}
+
+
+body.dark .info-box,
+body.dark .timeline-content,
+body.dark .education-card,
+body.dark .stat-box,
+body.dark .skill-card,
+body.dark .service-card,
+body.dark input, 
+body.dark textarea {
+
+    background: #9e40062f;
+
+}
+
+body.dark h3,
+body.dark input::placeholder,
+body.dark textarea::placeholder,
+body.dark a:hover{
+    color: rgb(133, 3, 3);
+}
+body.dark h2,
+body.dark h4{
+    color: #c17d2b;
+}
+
+body.dark .small-text
+{
+
+    color: rgb(255, 167, 123);
+
+}
+
+body.dark p,
+body.dark span {
+
+    color: black;
+
+}
+
+body.dark footer {
+
+    background: #120E0B;
+
+}
+
 /* ==========================================
         SMOOTH TRANSITIONS
 ========================================== */
