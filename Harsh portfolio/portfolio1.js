@@ -49,12 +49,12 @@ document.addEventListener("DOMContentLoaded", () => {
 
     window.addEventListener("scroll", () => {
 
-        if(window.scrollY > 60){
+        if (window.scrollY > 60) {
 
             header.style.background = "rgba(15,23,42,.95)";
             header.style.boxShadow = "0 10px 30px rgba(0,0,0,.25)";
 
-        }else{
+        } else {
 
             header.style.background = "rgba(15,23,42,.75)";
             header.style.boxShadow = "none";
@@ -71,11 +71,11 @@ document.addEventListener("DOMContentLoaded", () => {
 
     window.addEventListener("scroll", () => {
 
-        if(window.scrollY > 400){
+        if (window.scrollY > 400) {
 
             topBtn.classList.add("show");
 
-        }else{
+        } else {
 
             topBtn.classList.remove("show");
 
@@ -87,8 +87,8 @@ document.addEventListener("DOMContentLoaded", () => {
 
         window.scrollTo({
 
-            top:0,
-            behavior:"smooth"
+            top: 0,
+            behavior: "smooth"
 
         });
 
@@ -98,19 +98,19 @@ document.addEventListener("DOMContentLoaded", () => {
     // Smooth Scroll
     // ==========================================
 
-    document.querySelectorAll('a[href^="#"]').forEach(anchor=>{
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
 
-        anchor.addEventListener("click",function(e){
+        anchor.addEventListener("click", function (e) {
 
             e.preventDefault();
 
-            const target=document.querySelector(this.getAttribute("href"));
+            const target = document.querySelector(this.getAttribute("href"));
 
-            if(target){
+            if (target) {
 
                 target.scrollIntoView({
 
-                    behavior:"smooth"
+                    behavior: "smooth"
 
                 });
 
@@ -124,21 +124,21 @@ document.addEventListener("DOMContentLoaded", () => {
     // Reveal Animation
     // ==========================================
 
-    const reveals=document.querySelectorAll(
+    const reveals = document.querySelectorAll(
 
         ".about,.experience,.education,.stats,.skills,.services,.projects,.contact"
 
     );
 
-    function reveal(){
+    function reveal() {
 
-        reveals.forEach(item=>{
+        reveals.forEach(item => {
 
-            const top=item.getBoundingClientRect().top;
+            const top = item.getBoundingClientRect().top;
 
-            if(top<window.innerHeight-120){
+            if (top < window.innerHeight - 120) {
 
-                item.classList.add("fade-up","show");
+                item.classList.add("fade-up", "show");
 
             }
 
@@ -148,41 +148,41 @@ document.addEventListener("DOMContentLoaded", () => {
 
     reveal();
 
-    window.addEventListener("scroll",reveal);
+    window.addEventListener("scroll", reveal);
 
     // ==========================================
     // Contact Form
     // ==========================================
 
-    const form=document.querySelector(".contact-form");
+    const form = document.querySelector(".contact-form");
 
-    if(form){
+    if (form) {
 
-        form.addEventListener("submit",(e)=>{
+        form.addEventListener("submit", (e) => {
 
             e.preventDefault();
 
-            const inputs=form.querySelectorAll("input,textarea");
+            const inputs = form.querySelectorAll("input,textarea");
 
-            let valid=true;
+            let valid = true;
 
-            inputs.forEach(input=>{
+            inputs.forEach(input => {
 
-                if(input.value.trim()===""){
+                if (input.value.trim() === "") {
 
-                    valid=false;
+                    valid = false;
 
-                    input.style.borderColor="red";
+                    input.style.borderColor = "red";
 
-                }else{
+                } else {
 
-                    input.style.borderColor="#06B6D4";
+                    input.style.borderColor = "#06B6D4";
 
                 }
 
             });
 
-            if(valid){
+            if (valid) {
 
                 alert("Message sent successfully!");
 
@@ -198,15 +198,15 @@ document.addEventListener("DOMContentLoaded", () => {
     // Skill Bars Animation
     // ==========================================
 
-    const bars=document.querySelectorAll(".progress-bar");
+    const bars = document.querySelectorAll(".progress-bar");
 
-    function animateBars(){
+    function animateBars() {
 
-        bars.forEach(bar=>{
+        bars.forEach(bar => {
 
-            const width=bar.textContent;
+            const width = bar.textContent;
 
-            bar.style.width=width;
+            bar.style.width = width;
 
         });
 
@@ -218,32 +218,32 @@ document.addEventListener("DOMContentLoaded", () => {
     // Active Navigation
     // ==========================================
 
-    const sections=document.querySelectorAll("section");
-    const navLinks=document.querySelectorAll(".nav-links a");
+    const sections = document.querySelectorAll("section");
+    const navLinks = document.querySelectorAll(".nav-links a");
 
-    window.addEventListener("scroll",()=>{
+    window.addEventListener("scroll", () => {
 
-        let current="";
+        let current = "";
 
-        sections.forEach(section=>{
+        sections.forEach(section => {
 
-            const top=section.offsetTop-150;
+            const top = section.offsetTop - 150;
 
-            const height=section.offsetHeight;
+            const height = section.offsetHeight;
 
-            if(pageYOffset>=top){
+            if (pageYOffset >= top) {
 
-                current=section.getAttribute("id");
+                current = section.getAttribute("id");
 
             }
 
         });
 
-        navLinks.forEach(link=>{
+        navLinks.forEach(link => {
 
             link.classList.remove("active");
 
-            if(link.getAttribute("href")==="#"+current){
+            if (link.getAttribute("href") === "#" + current) {
 
                 link.classList.add("active");
 
@@ -257,36 +257,36 @@ document.addEventListener("DOMContentLoaded", () => {
     // Typing Effect
     // ==========================================
 
-    const title=document.querySelector(".hero h2");
+    const title = document.querySelector(".hero h2");
 
-    if(title){
+    if (title) {
 
-        const words=[
+        const words = [
             "Full Stack Developer",
             "Frontend Developer",
             "Backend Developer",
             "UI Designer"
         ];
 
-        let i=0;
+        let i = 0;
 
-        function changeWord(){
+        function changeWord() {
 
-            title.style.opacity="0";
+            title.style.opacity = "0";
 
-            setTimeout(()=>{
+            setTimeout(() => {
 
-                title.textContent=words[i];
+                title.textContent = words[i];
 
-                title.style.opacity="1";
+                title.style.opacity = "1";
 
-                i=(i+1)%words.length;
+                i = (i + 1) % words.length;
 
-            },300);
+            }, 300);
 
         }
 
-        setInterval(changeWord,2500);
+        setInterval(changeWord, 2500);
 
     }
 
@@ -294,19 +294,19 @@ document.addEventListener("DOMContentLoaded", () => {
     // Hero Image Float
     // ==========================================
 
-    const heroImg=document.querySelector(".hero-image img");
+    const heroImg = document.querySelector(".hero-image img");
 
-    if(heroImg){
+    if (heroImg) {
 
-        let direction=1;
+        let direction = 1;
 
-        setInterval(()=>{
+        setInterval(() => {
 
-            heroImg.style.transform=`translateY(${direction*10}px)`;
+            heroImg.style.transform = `translateY(${direction * 10}px)`;
 
-            direction*=-1;
+            direction *= -1;
 
-        },2000);
+        }, 2000);
 
     }
 
@@ -316,26 +316,26 @@ document.addEventListener("DOMContentLoaded", () => {
 // Loader
 // ==========================================
 
-window.addEventListener("load",()=>{
+window.addEventListener("load", () => {
 
-    const loader=document.createElement("div");
+    const loader = document.createElement("div");
 
-    loader.className="loader";
+    loader.className = "loader";
 
     document.body.prepend(loader);
 
-    setTimeout(()=>{
+    setTimeout(() => {
 
-        loader.style.opacity="0";
+        loader.style.opacity = "0";
 
-        loader.style.pointerEvents="none";
+        loader.style.pointerEvents = "none";
 
-        setTimeout(()=>{
+        setTimeout(() => {
 
             loader.remove();
 
-        },500);
+        }, 500);
 
-    },800);
+    }, 800);
 
 });
