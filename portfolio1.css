@@ -561,9 +561,8 @@ header {
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    margin: 10px 10px 10px 10px;
-    top: -85px;
-    left: 300px;
+    top: 160px;
+    left: -150px;
     position: relative;
     border-radius: 22px;
     background-color: rgba(255, 255, 255, 0.15);
@@ -575,6 +574,13 @@ header {
 
 .card h1 {
     color: var(--secondary)
+}
+
+.about-image {
+    display: flex;
+
+    justify-content: center;
+    align-items: center;
 }
 
 .about-image img {
@@ -1608,26 +1614,26 @@ footer hr {
     }
 
     .card {
-        flex-direction: column;
-        gap: 8px;
-        z-index: 50;
-        height: 500px;
-        width: 70px;
+        position: relative;
+
         top: 10px;
-        left: 20px;
+
+        left: 10px;
+
+        height: 70px;
+
+        width: 600px;
+
     }
 
-    .card h1 {
-        writing-mode: vertical-lr;
-        text-orientation: upright;
-        letter-spacing: 2px;
+    .img-box img {
+
+        width: 100%;
+
     }
 
     .about-image {
-
-        display: flex;
-
-        justify-content: center;
+        flex-direction: column;
 
     }
 
@@ -1731,7 +1737,7 @@ footer hr {
 
     .img-box img {
 
-        width: 300px;
+        width: 100%;
 
     }
 
@@ -2054,7 +2060,7 @@ body.dark .education-card,
 body.dark .stat-box,
 body.dark .skill-card,
 body.dark .service-card,
-body.dark input, 
+body.dark input,
 body.dark textarea {
 
     background: #9e40062f;
@@ -2064,16 +2070,16 @@ body.dark textarea {
 body.dark h3,
 body.dark input::placeholder,
 body.dark textarea::placeholder,
-body.dark a:hover{
+body.dark a:hover {
     color: rgb(133, 3, 3);
 }
+
 body.dark h2,
-body.dark h4{
+body.dark h4 {
     color: #c17d2b;
 }
 
-body.dark .small-text
-{
+body.dark .small-text {
 
     color: rgb(255, 167, 123);
 
